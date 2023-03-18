@@ -22,6 +22,10 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 ENV TOMCAT_NATIVE_LIBDIR=$CATALINA_HOME/native-jni-lib
 ENV LD_LIBRARY_PATH=$CATALINA_HOME/native-jni-lib
 
+COPY server.xml /usr/local/tomcat/conf/server.xml
+COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
+COPY logging.properties /usr/local/tomcat/conf/logging.properties
+
 WORKDIR $CATALINA_HOME
 USER tomcat
 EXPOSE 8080
