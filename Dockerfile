@@ -1,7 +1,7 @@
 FROM azul/zulu-openjdk-alpine:17.0.1-17.30.15-jre
 
 ENV TOMCAT_MAJOR=9 \
-    TOMCAT_VERSION=9.0.56
+    TOMCAT_VERSION=9.0.72
 
 RUN apk -U upgrade --update && \
     apk add --upgrade tomcat-native && \
